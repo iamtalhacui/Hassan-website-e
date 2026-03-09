@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+.admin-login-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  overflow: hidden;
+  background: #080810;
+}
+
+/* BG */
+.al-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.al-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.al-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+.al-orb1 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(232,201,126,0.08) 0%, transparent 70%);
+  top: -100px; left: -100px;
+}
+
+.al-orb2 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(100,80,255,0.07) 0%, transparent 70%);
+  bottom: -80px; right: 0;
+}
+
+/* LEFT */
+.al-left {
+  position: relative;
+  z-index: 1;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.al-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Syne', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 4rem;
+}
+
+.al-logo-icon { color: #e8c97e; font-size: 1.4rem; }
+.al-logo-text span { color: #e8c97e; }
+
+.al-headline {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  margin-bottom: 1.5rem;
+}
+
+.al-tagline {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.65;
+  max-width: 360px;
+  margin-bottom: 3rem;
+}
+
+.al-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.al-feat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.55);
+  padding: 0.65rem 1rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  max-width: 280px;
+  transition: all 0.2s;
+}
+
+.al-feat:hover {
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.8);
+}
+
+/* RIGHT */
+.al-right {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 3rem;
+  border-left: 1px solid rgba(255,255,255,0.05);
+}
+
+.al-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 2.5rem;
+  backdrop-filter: blur(20px);
+}
+
+.al-card-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.al-shield {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.al-card-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+
+.al-card-sub {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.4);
+}
+
+.al-error {
+  background: rgba(255,107,107,0.1);
+  border: 1px solid rgba(255,107,107,0.25);
+  color: #ff8f8f;
+  font-size: 0.85rem;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.25rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.al-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.al-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.al-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.al-input {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  color: #fff;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.al-input:focus { border-color: #e8c97e; }
+.al-input::placeholder { color: rgba(255,255,255,0.2); }
+
+.al-btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #080810;
+  background: #e8c97e;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.al-btn:hover:not(:disabled) {
+  background: #f0d898;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(232,201,126,0.3);
+}
+
+.al-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.al-spinner {
+  width: 18px; height: 18px;
+  border: 2px solid rgba(8,8,16,0.3);
+  border-top-color: #080810;
+  border-radius: 50%;
+  animation: alspin 0.6s linear infinite;
+  display: inline-block;
+}
+
+@keyframes alspin { to { transform: rotate(360deg); } }
+
+.al-back {
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.3);
+  margin-top: 1.5rem;
+}
+
+.al-link {
+  color: #e8c97e;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.al-link:hover { color: #f0d898; }
+
+@media (max-width: 768px) {
+  .admin-login-page { grid-template-columns: 1fr; }
+  .al-left { display: none; }
+  .al-right { padding: 2rem 1.25rem; border-left: none; }
+}
