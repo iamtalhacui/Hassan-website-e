@@ -1,4 +1,4 @@
-const BASE = "http://13.51.215.193:5000/api";
+const BASE = "/api";
 
 const getToken = () => localStorage.getItem("hs_token");
 
