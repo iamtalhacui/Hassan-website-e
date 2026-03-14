@@ -2,7 +2,7 @@ import React, { createContext, useState, useEffect } from "react";
 
 export const AuthContext = createContext();
 
-const BACKEND = "http://localhost:5000/api";
+const BACKEND = "http://13.51.215.193:5000/api";
 
 export const AuthProvider = ({ children }) => {
   const [user,      setUser]      = useState(null);
